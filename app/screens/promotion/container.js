@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar } from 'react-native';
+import { Text, View, WebView } from 'react-native';
 
-class HomeScreen extends Component {
+class PromotionScreen extends Component {
   
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Promotion</Text>
+      <View style={{ flex: 1 }}>
+        <WebView
+          source={{uri: 'https://www.apple.com'}}
+          style={{marginTop: 20}}
+          startInLoadingState={false}
+          cacheEnabled={true}
+        />
       </View>
     );
   }
 }
 
-export default HomeScreen;
+export default PromotionScreen;

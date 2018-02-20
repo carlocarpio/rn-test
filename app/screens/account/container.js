@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar } from 'react-native';
+import { Text, View, WebView } from 'react-native';
 
-class HomeScreen extends Component {
+class AccountScreen extends Component {
   
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Account</Text>
+      <View style={{ flex: 1 }}>
+        <WebView
+          source={{uri: 'https://www.gmail.com'}}
+          style={{marginTop: 20}}
+          startInLoadingState={false}
+          cacheEnabled={true}
+        />
       </View>
     );
   }
 }
 
-export default HomeScreen;
+export default AccountScreen;
